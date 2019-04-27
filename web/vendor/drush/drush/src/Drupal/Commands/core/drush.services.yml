@@ -21,9 +21,14 @@ services:
     class: \Drush\Drupal\Commands\core\ImageCommands
     tags:
       -  { name: drush.command }
+  language.commands:
+    class: \Drush\Drupal\Commands\core\LanguageCommands
+    arguments: ['@language_manager', '@module_handler']
+    tags:
+      -  { name: drush.command }
   locale.commands:
     class: \Drush\Drupal\Commands\core\LocaleCommands
-    arguments: ['@module_handler', '@state']
+    arguments: ['@language_manager', '@config.factory', '@module_handler', '@state']
     tags:
       -  { name: drush.command }
   messenger.commands:
@@ -44,6 +49,11 @@ services:
   state.commands:
     class: \Drush\Drupal\Commands\core\StateCommands
     arguments: ['@state']
+    tags:
+      -  { name: drush.command }
+  twig.commands:
+    class: \Drush\Drupal\Commands\core\TwigCommands
+    arguments: ['@twig', '@module_handler']
     tags:
       -  { name: drush.command }
   user.commands:

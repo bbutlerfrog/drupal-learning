@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'DrupalFinder\\DrupalFinder' => $vendorDir . '/webflo/drupal-finder/src/DrupalFinder.php',
-    'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
 );
