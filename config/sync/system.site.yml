@@ -1,0 +1,14 @@
+uuid: b3307455-1837-41fb-8076-f66d771866a5
+name: 'Test Drupal Site'
+mail: benfrog@benfrog.net
+slogan: 'This is a test Drupal Site'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

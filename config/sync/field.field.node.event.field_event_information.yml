@@ -1,0 +1,23 @@
+uuid: 9ce2a7fe-07c4-4a73-b3f7-2753da9f7eb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_information
+    - node.type.event
+  module:
+    - link
+id: node.event.field_event_information
+field_name: field_event_information
+entity_type: node
+bundle: event
+label: 'More Information'
+description: 'A link for more information or to register for the workshop'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

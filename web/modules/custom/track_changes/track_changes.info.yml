@@ -1,0 +1,6 @@
+name: Track Changes Module
+description: Shows Users Changes Between Their Logins.
+package: Custom
+
+type: module
+core: 8.x

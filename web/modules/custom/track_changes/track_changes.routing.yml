@@ -1,0 +1,7 @@
+track_changes.show:
+  path: '/changes'
+  defaults:
+    _controller: 'Drupal\track_changes\Controller\TrackChangesController::show'
+    _title: 'Changes Since Last Login'
+  requirements:
+    _permission: 'access changes'

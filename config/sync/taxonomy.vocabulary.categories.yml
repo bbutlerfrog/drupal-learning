@@ -1,0 +1,9 @@
+uuid: 70dc431e-7159-4863-9c6e-14f095bcaa22
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'Categories specific to blog posts'
+hierarchy: 0
+weight: 0

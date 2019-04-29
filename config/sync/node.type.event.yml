@@ -1,0 +1,17 @@
+uuid: 1e6ceb5f-cfe5-4eed-94e9-7b03a8681427
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Workshops and Speaking Engagements done throughout the year.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
