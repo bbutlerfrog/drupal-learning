@@ -1,0 +1,5 @@
+services:
+  http_middleware.trackchanges:
+    class: Drupal\track_changes\EventSubscriber\TrackChanges
+    tags:
+      - { name: 'event_subscriber' }

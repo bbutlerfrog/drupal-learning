@@ -19,25 +19,3 @@ function track_changes_user_login($account) {
         $change->save();
     }
 }
-
-function track_changes_preprocess_block(&$variables) {
-    if ($variables) {
-        $block = Block::load($variables['elements']['#id']);
-        $region = $block->getRegion();
-        if($region == "header"){
-            $user = \Drupal::currentUser();
-            $uid = $user->id();
-            //see if there are any changes the current user has not seen
-            $query = \Drupal::entityQuery('change')
-                ->condition('uid', $uid)
-                ->condition('was_seen', 0);
-            $entity_ids = $query->execute();
-            if ($entity_ids) {
-                $link = \Drupal\Core\Url::fromRoute('track_changes.show')->toString();
-                //display a message on each page until this user dismisses it
-                drupal_set_message(t('There have been some changes since the last time you logged in. 
-                    <a href="@link">Click here</a> to see them.', array('@link' => $link)));
-            }
-        }
-    }
-}
