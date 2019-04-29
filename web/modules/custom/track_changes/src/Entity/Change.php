@@ -47,6 +47,10 @@ class Change extends ContentEntityBase implements ContentEntityInterface {
             ->setLabel(t('Change was seen'))
             ->setDescription(t('This change was seen by the user'));
         
+        $fields['dismissed'] = BaseFieldDefinition::create('boolean')
+            ->setLabel(t('Change was dismissed'))
+            ->setDescription(t('This change was dismissed by the user'));            
+        
         return $fields;
     }
 

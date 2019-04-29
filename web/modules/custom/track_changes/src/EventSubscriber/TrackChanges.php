@@ -25,9 +25,10 @@ class TrackChanges implements EventSubscriberInterface {
     $entity_ids = $query->execute();
     if ($entity_ids) {
         $link = \Drupal\Core\Url::fromRoute('track_changes.show')->toString();
+        $closeLink = \Drupal\Core\Url::fromRoute('track_changes.close')->toString();
         //display a message on each page until this user dismisses it
         drupal_set_message(t('There have been some changes since the last time you logged in. 
-            <a href="@link">Click here</a> to see them.', array('@link' => $link)));
+            <a href="@link">Click here</a> to see them.  <a href="@close">Close this message</a>', array('@link' => $link, '@close' => $closeLink)));
     }
   }
 

@@ -5,3 +5,13 @@ track_changes.show:
     _title: 'Changes Since Last Login'
   requirements:
     _permission: 'access changes'
+
+track_changes.close:
+  path: '/close'
+  defaults:
+    _controller: 'Drupal\track_changes\Controller\TrackChangesController::close'
+    _title: 'Close Track Changes'
+  requirements:
+    _permission: 'access changes'
+
+
